@@ -3,20 +3,6 @@
   display: none;
 }
 
-h2, p {
-  z-index: 5;
-}
-
-img {
-  vertical-align: middle;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  z-index: -5;
-}
-
 /* Slideshow container */
 .slideshow-container {
   width: 100vw;
