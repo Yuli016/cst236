@@ -22,16 +22,6 @@ div#ocrina {
   background-size: cover;
 }
 
-div#orginal {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://images2.alphacoders.com/852/thumb-1920-852385.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 div#breath {
   height: 100%;
   margin: 0;
@@ -44,4 +34,6 @@ div#breath {
 
 #scrollable {
   overflow-y: scroll;
+  width: 100%;
+  height: auto;
 }
