@@ -11,6 +11,7 @@ body {
 /*Slideshow*/
 #slideshow {
   overflow-x: hidden;
+  z-index: 5;
 }
 
 #slideshow figure {

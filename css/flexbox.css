@@ -48,36 +48,20 @@ nav {
   padding: 25px;
 }
 
-h1 {
-  text-align: center;
-  color: #b8860b;
-  font-family: 'Rokkitt', serif;
-  font-size: 100px;
-}
-
-p {
-  font-family: 'Bitter', serif;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  font-size: 30px;
-  z-index: 5;
-}
-
-img#bottom {
-  position: absolute;
-  bottom: 10px;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  z-index: 5;
-}
-
 #gamecontainer {
   width: 100%;
   height: auto;
-  position: relative;
+}
+
+#gamepng {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+#gamepng img {
+  width: 100%;
+  height: auto;
 }
 
 .flex-container {
@@ -91,28 +75,26 @@ img#bottom {
 
 .flex-menu {
   padding: 10px;
-  flex: 15%;
+  flex: 10%;
 }
 
 .flex-info {
   padding: 10px;
-  flex: 70%;
+  flex: 65%;
   overflow: hidden;
   height: 100vh;
   position: relative;
   overflow: scroll;
-  /* background-color: #013220; */
-  border: 5px solid gold;
-  z-index: 1;
 }
 
 .flex-gamebox {
   padding: 10px;
-  flex: 15%;
+  flex: 10%;
+  position: relative;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .flex-menu, .flex-info, .flex-gamebox {
     flex: 100%;
   }

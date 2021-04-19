@@ -1,0 +1,13 @@
+body {
+  background-color: #013220;
+  color: white;
+  margin: 0;
+  padding: 0;
+  @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap');
+  border: 10px solid #b8860b;
+  overflow-x: hidden;
+}
+
+#frame001 {
+  padding: 9vh 9vw;
+}
