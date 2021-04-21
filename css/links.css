@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.container-box {
+
+}
+
+.link-image {
+  padding: 10px;
+  flex: 40%;
+}
+
+.link-info {
+  padding: 10px;
+  flex: 60%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .link-info, .link-image {
+    flex: 100%;
+  }
+}
+
+#o,#oot,#ss,#botw {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}

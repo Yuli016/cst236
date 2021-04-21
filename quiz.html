@@ -3,33 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Quiz</title>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type="text/javascript" src='questions.json' defer></script>
+    <script type='text/javascript' src='jsquiz.js' defer></script>
     <script src="js/quiz.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/quiz.css">
   </head>
   <body>
-
-
-    <div id="frame001">
-          <div id="text001">
-              <h2>Quiz</h2>
-              Question: <text id="number001">0</text><br />
-              Score: <text id="score001">0</text>
-          <hr />
-                  <div id="message001">Click Begin to start</div><br />
-              </div>
-          <div id="text002">
-              <div id="question001"></div>
-              <div id="option001"></div>
-              <div id="option002"></div>
-              <div id="option003"></div>
-              <div id="option004"></div>
-              <div id="answer001"></div>
-              <div id="text001">
-                  <div id="disappear001"><button class="buttons001" onclick="begin001()">Begin</button></div>
-              </div>
-              <div id="next001"></div>
-          </div>
-          </div>
+    
+    <div id='container'>
+			<div id='title'>
+				<h1>Quiz</h1>
+			</div>
+   			<br/>
+  			<div id='quiz'></div>
+    		<div class='button' id='next'><a href='#'>Next</a></div>
+    		<div class='button' id='prev'><a href='#'>Prev</a></div>
+    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
+    		<!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+    	</div>
 
 
   </body>

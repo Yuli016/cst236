@@ -1,371 +1,167 @@
-// https://www.ikhtabirni.com/how-to-make-a-multiple-choice-quiz-using-javascript-arrays.html
+(function() {
+  var questions = [{
+    question: "What is 2*5?",
+    choices: [2, 5, 10, 15, 20],
+    correctAnswer: 2
+  }, {
+    question: "What is 3*6?",
+    choices: [3, 6, 9, 12, 18],
+    correctAnswer: 4
+  }, {
+    question: "What is 8*9?",
+    choices: [72, 99, 108, 134, 156],
+    correctAnswer: 0
+  }, {
+    question: "What is 1*7?",
+    choices: [4, 5, 6, 7, 8],
+    correctAnswer: 3
+  }, {
+    question: "What is 8*8?",
+    choices: [20, 30, 40, 50, 64],
+    correctAnswer: 4
+  }];
 
+  var questionCounter = 0; //Tracks question number
+  var selections = []; //Array containing user choices
+  var quiz = $('#quiz'); //Quiz div object
 
+  // Display initial question
+  displayNext();
 
-var q = ["What is 1 + 1?<br /><br />", "What is 2 + 2?<br /><br />", "What is 3 + 3?<br /><br />", "What is 4 + 4?<br /><br />", "What is 5 + 5?<br /><br />", "What is 6 + 6?<br /><br />", "What is 7 + 7?<br /><br />", "What is 5 + 1?<br /><br />", "What is 8 + 8?<br /><br />", "What is 9 + 9?<br /><br />"];
-var a1 = ["<button class=buttons002 onclick=q1c()>2</button>",
-          "<button class=buttons002 onclick=q2c()>4</button>",
-          "<button class=buttons002 onclick=q3c()>6</button>",
-          "<button class=buttons002 onclick=q4i()>13</button>",
-          "<button class=buttons002 onclick=q5i()>6</button>",
-          "<button class=buttons002 onclick=q6i()>4</button>",
-          "<button class=buttons002 onclick=q7i()>8</button>",
-          "<button class=buttons002 onclick=q8i()>13</button>",
-          "<button class=buttons002 onclick=q9i()>8</button>",
-          "<button class=buttons002 onclick=q10i()>14</button>"];
+  // Click handler for the 'next' button
+  $('#next').on('click', function (e) {
+    e.preventDefault();
 
-var a2 = ["<button class=buttons002 onclick=q1i()>5</button>",
-          "<button class=buttons002 onclick=q2i()>7</button>",
-          "<button class=buttons002 onclick=q3i()>2</button>",
-          "<button class=buttons002 onclick=q4c()>8</button>",
-          "<button class=buttons002 onclick=q5c()>10</button>",
-          "<button class=buttons002 onclick=q6c()>12</button>",
-          "<button class=buttons002 onclick=q7i()>17</button>",
-          "<button class=buttons002 onclick=q8i()>5</button>",
-          "<button class=buttons002 onclick=q9i()>17</button>",
-          "<button class=buttons002 onclick=q10i()>12</button>"];
+    // Suspend click listener during fade animation
+    if(quiz.is(':animated')) {
+      return false;
+    }
+    choose();
 
-var a3 = ["<button class=buttons002 onclick=q1i()>7</button>",
-          "<button class=buttons002 onclick=q2i()>6</button>",
-          "<button class=buttons002 onclick=q3i()>9</button>",
-          "<button class=buttons002 onclick=q4i()>9</button>",
-          "<button class=buttons002 onclick=q5i()>7</button>",
-          "<button class=buttons002 onclick=q6i()>9</button>",
-          "<button class=buttons002 onclick=q7c()>14</button>",
-          "<button class=buttons002 onclick=q8c()>6</button>",
-          "<button class=buttons002 onclick=q9i()>2</button>",
-          "<button class=buttons002 onclick=q10i()>9</button>"];
+    // If no user selection, progress is stopped
+    if (isNaN(selections[questionCounter])) {
+      alert('Please make a selection!');
+    } else {
+      questionCounter++;
+      displayNext();
+    }
+  });
 
-var a4 = ["<button class=buttons002 onclick=q1i()>8</button>",
-          "<button class=buttons002 onclick=q2i()>2</button>",
-          "<button class=buttons002 onclick=q3i()>14</button>",
-          "<button class=buttons002 onclick=q4i()>1</button>",
-          "<button class=buttons002 onclick=q5i()>2</button>",
-          "<button class=buttons002 onclick=q6i()>8</button>",
-          "<button class=buttons002 onclick=q7i()>2</button>",
-          "<button class=buttons002 onclick=q8i()>9</button>",
-          "<button class=buttons002 onclick=q9c()>16</button>",
-          "<button class=buttons002 onclick=q10c()>18</button>"];
+  // Click handler for the 'prev' button
+  $('#prev').on('click', function (e) {
+    e.preventDefault();
 
-var c = ["Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct"];
-var i = ["Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect"];
+    if(quiz.is(':animated')) {
+      return false;
+    }
+    choose();
+    questionCounter--;
+    displayNext();
+  });
 
-var n = 0;
-n++;
-var s = 0;
-s++;
+  // Click handler for the 'Start Over' button
+  $('#start').on('click', function (e) {
+    e.preventDefault();
 
-function begin001() {
-    disappear001.innerHTML = "";
-    message001.innerHTML = "";
-    question001.innerHTML = q[0];
-    option001.innerHTML = a1[0];
-    option002.innerHTML = a2[0];
-    option003.innerHTML = a3[0];
-    option004.innerHTML = a4[0];
-    number001.innerHTML = n++;
-}
+    if(quiz.is(':animated')) {
+      return false;
+    }
+    questionCounter = 0;
+    selections = [];
+    displayNext();
+    $('#start').hide();
+  });
 
-function q1c() {
-    answer001.innerHTML = "<div id=green001>" + c[0] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
-    score001.innerHTML = s++;
-}
+  // Animates buttons on hover
+  $('.button').on('mouseenter', function () {
+    $(this).addClass('active');
+  });
+  $('.button').on('mouseleave', function () {
+    $(this).removeClass('active');
+  });
 
-function q1i() {
-    answer001.innerHTML = "<div id=red001>" + i[0] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
-}
+  // Creates and returns the div that contains the questions and
+  // the answer selections
+  function createQuestionElement(index) {
+    var qElement = $('<div>', {
+      id: 'question'
+    });
 
-function new002() {
-    question001.innerHTML = q[1];
-    option001.innerHTML = a1[1];
-    option002.innerHTML = a2[1];
-    option003.innerHTML = a3[1];
-    option004.innerHTML = a4[1];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
+    var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+    qElement.append(header);
 
-function q2c() {
-    answer001.innerHTML = "<div id=green001>" + c[1] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new003()>Next</button>";
-    score001.innerHTML = s++;
-}
+    var question = $('<p>').append(questions[index].question);
+    qElement.append(question);
 
-function q2i() {
-    answer001.innerHTML = "<div id=red001>" + i[1] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new003()>Next</button>";
-}
+    var radioButtons = createRadios(index);
+    qElement.append(radioButtons);
 
-function new003() {
-    question001.innerHTML = q[2];
-    option001.innerHTML = a1[2];
-    option002.innerHTML = a2[2];
-    option003.innerHTML = a3[2];
-    option004.innerHTML = a4[2];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
+    return qElement;
+  }
 
-function q3c() {
-    answer001.innerHTML = "<div id=green001>" + c[2] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new004()>Next</button>";
-    score001.innerHTML = s++;
-}
+  // Creates a list of the answer choices as radio inputs
+  function createRadios(index) {
+    var radioList = $('<ul>');
+    var item;
+    var input = '';
+    for (var i = 0; i < questions[index].choices.length; i++) {
+      item = $('<li>');
+      input = '<input type="radio" name="answer" value=' + i + ' />';
+      input += questions[index].choices[i];
+      item.append(input);
+      radioList.append(item);
+    }
+    return radioList;
+  }
 
-function q3i() {
-    answer001.innerHTML = "<div id=red001>" + i[2] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new004()>Next</button>";
-}
+  // Reads the user selection and pushes the value to an array
+  function choose() {
+    selections[questionCounter] = +$('input[name="answer"]:checked').val();
+  }
 
-function new004() {
-    question001.innerHTML = q[3];
-    option001.innerHTML = a1[3];
-    option002.innerHTML = a2[3];
-    option003.innerHTML = a3[3];
-    option004.innerHTML = a4[3];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
+  // Displays next requested element
+  function displayNext() {
+    quiz.fadeOut(function() {
+      $('#question').remove();
 
-function q4c() {
-    answer001.innerHTML = "<div id=green001>" + c[3] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new005()>Next</button>";
-    score001.innerHTML = s++;
-}
+      if(questionCounter < questions.length){
+        var nextQuestion = createQuestionElement(questionCounter);
+        quiz.append(nextQuestion).fadeIn();
+        if (!(isNaN(selections[questionCounter]))) {
+          $('input[value='+selections[questionCounter]+']').prop('checked', true);
+        }
 
-function q4i() {
-    answer001.innerHTML = "<div id=red001>" + i[3] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new005()>Next</button>";
-}
+        // Controls display of 'prev' button
+        if(questionCounter === 1){
+          $('#prev').show();
+        } else if(questionCounter === 0){
 
-function new005() {
-    question001.innerHTML = q[4];
-    option001.innerHTML = a1[4];
-    option002.innerHTML = a2[4];
-    option003.innerHTML = a3[4];
-    option004.innerHTML = a4[4];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
+          $('#prev').hide();
+          $('#next').show();
+        }
+      }else {
+        var scoreElem = displayScore();
+        quiz.append(scoreElem).fadeIn();
+        $('#next').hide();
+        $('#prev').hide();
+        $('#start').show();
+      }
+    });
+  }
 
-function q5c() {
-    answer001.innerHTML = "<div id=green001>" + c[4] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new006()>Next</button>";
-    score001.innerHTML = s++;
-}
+  // Computes score and returns a paragraph element to be displayed
+  function displayScore() {
+    var score = $('<p>',{id: 'question'});
 
-function q5i() {
-    answer001.innerHTML = "<div id=red001>" + i[4] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new006()>Next</button>";
-}
+    var numCorrect = 0;
+    for (var i = 0; i < selections.length; i++) {
+      if (selections[i] === questions[i].correctAnswer) {
+        numCorrect++;
+      }
+    }
 
-function new006() {
-    question001.innerHTML = q[5];
-    option001.innerHTML = a1[5];
-    option002.innerHTML = a2[5];
-    option003.innerHTML = a3[5];
-    option004.innerHTML = a4[5];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
-
-function q6c() {
-    answer001.innerHTML = "<div id=green001>" + c[5] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new007()>Next</button>";
-    score001.innerHTML = s++;
-}
-
-function q6i() {
-    answer001.innerHTML = "<div id=red001>" + i[5] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new007()>Next</button>";
-}
-
-function new007() {
-    question001.innerHTML = q[6];
-    option001.innerHTML = a1[6];
-    option002.innerHTML = a2[6];
-    option003.innerHTML = a3[6];
-    option004.innerHTML = a4[6];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
-
-function q7c() {
-    answer001.innerHTML = "<div id=green001>" + c[6] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new008()>Next</button>";
-    score001.innerHTML = s++;
-}
-
-function q7i() {
-    answer001.innerHTML = "<div id=red001>" + i[6] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new008()>Next</button>";
-}
-
-function new008() {
-    question001.innerHTML = q[7];
-    option001.innerHTML = a1[7];
-    option002.innerHTML = a2[7];
-    option003.innerHTML = a3[7];
-    option004.innerHTML = a4[7];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
-
-function q8c() {
-    answer001.innerHTML = "<div id=green001>" + c[7] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new009()>Next</button>";
-    score001.innerHTML = s++;
-}
-
-function q8i() {
-    answer001.innerHTML = "<div id=red001>" + i[7] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new009()>Next</button>";
-}
-
-function new009() {
-    question001.innerHTML = q[8];
-    option001.innerHTML = a1[8];
-    option002.innerHTML = a2[8];
-    option003.innerHTML = a3[8];
-    option004.innerHTML = a4[8];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
-
-function q9c() {
-    answer001.innerHTML = "<div id=green001>" + c[8] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new010()>Next</button>";
-    score001.innerHTML = s++;
-}
-
-function q9i() {
-    answer001.innerHTML = "<div id=red001>" + i[8] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=new010()>Next</button>";
-}
-
-function new010() {
-    question001.innerHTML = q[9];
-    option001.innerHTML = a1[9];
-    option002.innerHTML = a2[9];
-    option003.innerHTML = a3[9];
-    option004.innerHTML = a4[9];
-    next001.innerHTML = "";
-    answer001.innerHTML = "";
-    number001.innerHTML = n++;
-}
-
-function q10c() {
-    answer001.innerHTML = "<div id=green001>" + c[9] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
-    score001.innerHTML = s++;
-}
-
-function q10i() {
-    answer001.innerHTML = "<div id=red001>" + i[9] + "</div>";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
-}
-
-function end001() {
-    message001.innerHTML = "End of Quiz.";
-    question001.innerHTML = "";
-    option001.innerHTML = "";
-    option002.innerHTML = "";
-    option003.innerHTML = "";
-    option004.innerHTML = "";
-    next001.innerHTML = "<div id=text001>" + "<button class=buttons001 onclick=repeat001()>Repeat</button>" + "</div>";
-    answer001.innerHTML = "";
-}
-
-function repeat001() {
-    location.reload();
-}
+    score.append('You got ' + numCorrect + ' questions out of ' +
+                 questions.length + ' right!!!');
+    return score;
+  }
+})();

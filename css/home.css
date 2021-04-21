@@ -5,6 +5,42 @@ body {
   padding: 0;
   @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap');
   z-index: -5;
+  border-bottom: 10px solid #b8860b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#links {
+  object-fit: contain;
+  bottom: 0;
+}
+
+figcaption {
+  text-align: center;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  width: 25%;
+  padding: 0px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
 }
 
 img {
@@ -13,9 +49,7 @@ img {
 }
 
 #center-box {
-  padding: 5vh 5vw;
-  border-left: 10px solid #b8860b;
-  border-right: 10px solid #b8860b;
+  padding: 6vh 6vw;
 }
 
 #padding {

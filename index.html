@@ -10,17 +10,25 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap" rel="stylesheet">
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/> -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://yuli016.github.io/zelda/img/triforce.png"/>
 
 	<link rel="stylesheet" type="text/css" href="css/banner.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
+	<link rel="stylesheet" type="text/css" href="css/music.css">
+	<link rel="stylesheet" type="text/css" href="css/links.css">
 	<script src="js/fade.js" defer></script>
 </head>
 <body>
-	<audio autoplay autostart="ture" loop="true">
-		<source src="https://yuli016.github.io/zelda/music/song-o.mp3" type="audio/mpeg">
-	</audio>
-
+		<div id="music-box">
+			<audio id="nyan" loop="ture"
+				src="https://yuli016.github.io/zelda/music/song-o.mp3" type="audio/mpeg">
+			</audio>
+			<a class="btn" id="nyan-btn">Music</a>
+		</div>
 	<div id="slideshow">
 		<figure>
 			<img src="img/o-banner.jpg">
@@ -32,6 +40,13 @@
 	</div><br>
 
 	<div id="center-box">
+		<!-- <div id"music-box">
+			<audio id="nyan" loop="ture"
+	      src="https://yuli016.github.io/zelda/music/song-o.mp3" type="audio/mpeg">
+			</audio>
+			<a class="btn" id="nyan-btn">Music</a>
+		</div> -->
+
 		<h1>The Legend of Zelda Evolution</h1>
 
 		<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -123,9 +138,125 @@
 
 		<div id="action-button">
 			<a data-aos="zoom-out" href="#" class="action">Quiz</a>
+		</div><br>
+
+		<div class="slide" class="container-box">
+			<div id="o">
+			  <div class="link-image">
+					<img id="links" src="./img/o-link.png">
+				</div>
+
+			  <div class="link-info">
+					<h1>The Origanal Zelda</h1>
+					<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide" class="container-box">
+			<div id="oot">
+				<div class="link-image">
+					<img id="links" src="./img/oot-link.png">
+				</div>
+
+				<div class="link-info">
+					<h1>Ocrina of Time</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide" class="container-box">
+			<div id="ss">
+				<div class="link-image">
+					<img id="links" src="./img/ss-link.png">
+				</div>
+
+				<div class="link-info">
+					<h1>Skyward Sword</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide" class="container-box">
+			<div id="botw">
+				<div class="link-image">
+					<img id="links" src="./img/botw-link.png">
+				</div>
+
+				<div class="link-info">
+					<h1>Breath of The Wild</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+					non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
 		</div>
 
 	</div>
+
+	<!-- <div class="row">
+		<div class="column">
+			<img id="links" src="./img/o-link.png">
+		</div>
+
+		<div class="column">
+			<img id="links" src="./img/oot-link.png">
+		</div>
+
+		<div class="column">
+			<img id="links" src="./img/ss-link.png">
+		</div>
+
+		<div class="column">
+			<img id="links" src="./img/botw-link.png">
+		</div>
+	</div> -->
 
 
 </body>
