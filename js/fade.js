@@ -43,6 +43,3 @@ nyanBtn.addEventListener('click', function(){
    playPause(nyan);
    progress(nyanBtn, nyan);
 });
-
-
-w3.slideshow(".slide", 7500);

@@ -1,11 +1,19 @@
 body {
-  background-color: #013220;
+  background-image: url("https://yuli016.github.io/zelda/img/pattern-triforce.png"), linear-gradient(#013220, #004242);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  height: auto;
+  min-height: 100%;
+  background-size: 1.2rem, cover;
+
   color: white;
   margin: 0;
   padding: 0;
   @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap');
   z-index: -5;
   border-bottom: 10px solid #b8860b;
+  overflow-x: hidden;
 }
 
 * {
@@ -15,10 +23,6 @@ body {
 #links {
   object-fit: contain;
   bottom: 0;
-}
-
-figcaption {
-  text-align: center;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -49,7 +53,13 @@ img {
 }
 
 #center-box {
-  padding: 6vh 6vw;
+  padding: 5vh 3vw;
+}
+
+@media screen and (min-width: 700px) {
+  #center-box {
+    padding: 7vh 7vw;
+  }
 }
 
 #padding {
@@ -131,12 +141,12 @@ a.action {
 
 h1 {
   line-height: 150%;
-  font-size: 65px;
+  font-size: 70px;
 }
 
 @media screen and (max-width: 801px) {
   h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
 }
 

@@ -1,47 +1,53 @@
-.mySlides {
-  display: none;
+#original, #ocrina, #skyward, #breath {
+  display: block;
 }
 
 /* Slideshow container */
 .slideshow-container {
   width: 100vw;
-  height: 100vh;
   position: relative;
   margin: 0;
+  padding: 0;
 }
 
-/* Next & previous buttons */
-.prev,.next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #b8860b;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  user-select: none;
-  z-index: 300;
+#right, #left {
+  width: 8%;
 }
 
 /* Position the "next button" to the right */
-.next {
-  right: 0;
+.next, #right {
+  right: 8px;
+  float: right;
 }
 
 /* Position the "next button" to the right */
 .prev {
-  left: 0;
+  left: 8px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: #013220;
+.prev, .next {
+  position: fixed;
+  top: 50%;
+  z-index: 1000;
+}
+
+#right, #left {
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
 /* Fading animation */
-.fade,#hardware {
+.fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
