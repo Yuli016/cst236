@@ -1,182 +1,239 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gameplay</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
-	<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<title>Gameplay Innovations</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Rokkitt:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="https://yuli016.github.io/zelda/img/triforce.png"/>
 
-	<link rel="stylesheet" type="text/css" href="css/text.css">
-	<link rel="stylesheet" type="text/css" href="css/flexbox.css">
-	<link rel="stylesheet" type="text/css" href="css/reveal.css">
+	<link rel="stylesheet" type="text/css" href="css/banner.css">
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/music.css">
 	<link rel="stylesheet" type="text/css" href="css/slide.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
-
-	<script src="js/reveal.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/navs.css">
 	<script src="js/fade.js" defer></script>
 	<script src="js/slide.js" defer></script>
-
+	<script src="js/reveal.js" defer></script>
 </head>
 <body>
-	<!-- <audio autoplay muted autostart="ture" loop="true">
-		<source src="https://yuli016.github.io/zelda/music/song-ss.mp3" type="audio/mpeg">
-	</audio> -->
 
 	<div class="slideshow-container">
-
-		<a class="prev" href="./hardware.html"> <i class="fas fa-arrow-alt-circle-left" onclick="plusSlides(-1)"></i></a>
-		<a class="next" href="./visual.html"> <i class="fas fa-arrow-alt-circle-right" onclick="plusSlides(1)"></i></a>
-
-		<div class="mySlides fade">
-			<div id="skyward">
-				<div class="flex-container">
-
-					<div class="flex-menu">
-						<nav id="links-navs">
-							<a href="./index.html">Home</a><br>
-							<a href="./hardware.html">Hardware</a><br>
-							<a href="./gameplay.html">Gameplay</a><br>
-							<a href="./visual.html">Visual Design</a><br>
-						</nav>
-					</div>
-
-					<div class="flex-info">
-						<div id="scrollable">
-							<h1>Gameplay Inovations</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<div class="video-container">
-								<iframe data-aos="fade-up" class="responsive-iframe" src="https://www.youtube.com/embed/W5AZeNGB6Ds"></iframe>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-							in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-							officia deserunt mollit anim id est laborum.</p>
-
+		<header>
+			<nav>
+				<ul>
+					<li><a id="link-color" href="./index.html">Home</a></li>
+						<div class="dropbox">
+							<li><a id="link-color" href="#">Content</a></li>
+								<div class="dropbox-content">
+									<div>
+										<li><a id="box-link" href="./hardware.html">Hardware</a></li>
+										<li><a id="box-link" href="./gameplay.html">Gameplay</a></li>
+										<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
+									</div>
+								</div>
 						</div>
-					</div>
+					<li><a id="link-color" href="./source.html">Source</a></li>
+				</ul>
+			</nav>
+		</header>
 
-					<div class="flex-gamebox">
-
-						<div id="gamecontainer">
-							<img src="./img/ss-gamebox.jpg">
-						</div><br>
-
-					</div>
-
-				</div>
-			</div><!--skyward thing -->
+		<div id="music-box">
+			<audio id="nyan" loop="ture"
+				src="https://yuli016.github.io/zelda/music/song-ss.mp3" type="audio/mpeg">
+			</audio>
+			<a class="btn" id="nyan-btn">Music</a>
 		</div>
 
+		<div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+				<img src="img/o-banner.jpg">
+
+				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
+				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+
+					<div id="skyward">
+						<div id="center-box">
+
+							<h1>Gameplay Innovations</h1>
+
+							<div id="flex-center">
+								<div class="nav-tabs" id="nav-tab" role="tablist">
+									<div class="nav nav-tabs" id="nav-tab" role="tablist">
+										<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
+										<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
+										<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+									</div>
+								</div>
+							</div><br>
+
+							<p data-aos="fade-up">The Original Gameplay Innovations</p>
+							<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+							non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
+					</div>
+				</div>
+
+			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+				<img src="img/oot-banner.jpg">
+
+				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
+				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+
+				<div id="skyward">
+					<div id="center-box">
+						<h1>Gameplay Innovations</h1>
+
+						<div id="flex-center">
+							<div class="nav-tabs" id="nav-tab" role="tablist">
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Original</a><br>
+									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
+									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+								</div>
+							</div>
+						</div><br>
+
+						<p data-aos="fade-up">Ocarina of Time Gameplay Innovations</p>
+						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+					</div>
+				</div>
+			</div><!--Div End -->
+
+			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+				<img src="img/ss-banner.jpg">
+
+				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
+				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+
+				<div id="skyward">
+					<div id="center-box">
+
+						<h1>Gameplay Innovations</h1>
+
+						<div id="flex-center">
+							<div class="nav-tabs" id="nav-tab" role="tablist">
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false">Original</a><br>
+									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
+									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" type="button" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+								</div>
+							</div>
+						</div><br>
+
+						<p data-aos="fade-up">Skyward Swords Gameplay Innovations</p>
+						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+					</div>
+				</div>
+			</div><!--Div End -->
+
+			<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
+				<img src="img/copy.jpg">
+
+				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
+				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+
+				<div id="skyward">
+					<div id="center-box">
+
+						<h1>Gameplay Innovations</h1>
+
+						<div id="flex-center">
+							<div class="nav-tabs" id="nav-tab" role="tablist">
+								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false">Original</a><br>
+									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
+									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
+								</div>
+							</div>
+						</div><br>
+
+						<p data-aos="fade-up">Breath of The Wild Gameplay Innovations</p>
+						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+					</div>
+				</div>
+			</div><!--Div End -->
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+		<footer id="footer">
+				<!--Grid row-->
+				<div class="row">
+
+					<!--Grid column-->
+					<div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+						<h4 id="footer-left">Info</h4>
+						<p id="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!--Grid column-->
+
+					<!--Grid column-->
+					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+						<h4 id="white">Content</h4>
+
+						<ul class="list-unstyled mb-0">
+							<li>
+								 <a href="./hardware.html" class="footer-link">Hardware Inovations</a>
+							</li>
+							<li>
+								<a href="./gameplay.html" class="footer-link">Gameplay Inovations</a>
+							</li>
+							<li>
+								<a href="./visuals.html" class="footer-link">Visuals Design</a>
+							</li>
+						</ul>
+					</div>
+					<!--Grid column-->
+
+					<!--Grid column-->
+					<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+						<h4 id="white">Source</h4>
+
+						<ul class="list-unstyled">
+							<li>
+								<a href="./source.html#hardware" class="footer-link">Hardware</a>
+							</li>
+							<li>
+								<a href="./source.html#gameplay" class="footer-link">Gameplay</a>
+							</li>
+							<li>
+								<a href="./source.html#design" class="footer-link">Visulas Designs</a>
+							</li>
+						</ul>
+					</div>
+					<!--Grid column-->
+				</div>
+				<!--Grid row-->
+		</footer>
+		<!-- Footer -->
 	</div>
 
 </body>

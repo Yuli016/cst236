@@ -62,6 +62,12 @@ img {
   }
 }
 
+@media screen and (max-width: 1025px) {
+  #center-box {
+    padding: 5vh 5vw;
+  }
+}
+
 #padding {
   padding: 20px 20px;
 }
@@ -90,7 +96,7 @@ p {
   padding: 10px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 824px) {
   .cols {
     width: 100%;
     display: block;
@@ -157,7 +163,7 @@ h1 {
 }
 
 p.card-info {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Rokkitt', serif;
   line-height: 150%;
   font-size: 18px;
 }

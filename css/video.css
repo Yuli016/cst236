@@ -16,3 +16,23 @@
   border: none;
   padding: 50px;
 }
+
+#flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#centering {
+  left: 50%;
+  color: white;
+  align-content: space-evenly;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+}
+
+#centering:hover {
+  color: #b8860b;
+}
