@@ -24,15 +24,74 @@
   align-items: center;
 }
 
-#centering {
+a#centering {
   left: 50%;
   color: white;
   align-content: space-evenly;
   padding: 5px;
   margin: 5px;
-  border: none;
 }
 
-#centering:hover {
+a#centering:hover {
+  color: #b8860b;
+}
+
+span {
+  color: #b8860b;
+  font-weight: bolder;
+}
+
+#smaller-img {
+  height: auto;
+  float: right;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.control {
+  flex: 60%;
+}
+
+.controller {
+  flex: 40%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+  .control, .controller, .column {
+    flex: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+figcaption {
+  text-align: center;
+  font-family: Bitter;
+  font-weight: bolder;
   color: #b8860b;
 }
