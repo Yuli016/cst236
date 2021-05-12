@@ -66,6 +66,32 @@ span {
   }
 }
 
+.image {
+  flex: 50%;
+  padding: 5px;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 600px) {
+  .image {
+    flex: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  img#half {
+    width: 100%;
+  }
+}
+
+#half {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   box-sizing: border-box;
 }
