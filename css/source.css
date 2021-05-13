@@ -56,12 +56,12 @@ h2.name {
   padding: 20px;
 }
 
-.team-link {
-  color: #5aa7a7;
+#color-links {
+  color: white;
 }
 
-.team-link:hover {
-  color: #6c8cbf;
+#color-links:hover {
+  color: #b8860b;
 }
 
 .card {

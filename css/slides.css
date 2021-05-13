@@ -7,7 +7,7 @@
 }
 
 #right, #left {
-  width: 3%;
+  width: 4%;
   position: fixed;
   z-index: 1000;
   object-fit: contain;
@@ -27,6 +27,7 @@
 #right, #left {
   -webkit-animation: action 1s infinite  alternate;
   animation: action 1s infinite  alternate;
+  cursor: pointer;
 }
 
 @-webkit-keyframes action {
@@ -58,8 +59,15 @@
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 800px) {
   #right, #left {
-    font-size: 11px
+    width: 2.5%;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 400px) {
+  #right, #left {
+    width: 6%;
   }
 }
