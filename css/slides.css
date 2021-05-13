@@ -1,5 +1,5 @@
 /* Slideshow container */
-.slideshow-container {
+.box {
   width: 100vw;
   position: relative;
   margin: 0;
@@ -7,24 +7,21 @@
 }
 
 #right, #left {
-  width: 8%;
+  width: 3%;
+  position: fixed;
+  z-index: 1000;
+  object-fit: contain;
 }
 
 /* Position the "next button" to the right */
-.next, #right {
+#right {
   right: 8px;
   float: right;
 }
 
 /* Position the "next button" to the right */
-.prev {
+#left {
   left: 8px;
-}
-
-.prev, .next {
-  position: fixed;
-  top: 50%;
-  z-index: 1000;
 }
 
 #right, #left {
@@ -62,5 +59,7 @@
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next {font-size: 11px}
+  #right, #left {
+    font-size: 11px
+  }
 }

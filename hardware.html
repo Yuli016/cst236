@@ -12,36 +12,33 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="https://yuli016.github.io/zelda/img/triforce.png"/>
 
-	<link rel="stylesheet" type="text/css" href="css/banner.css">
 	<link rel="stylesheet" type="text/css" href="css/basic.css">
 	<link rel="stylesheet" type="text/css" href="css/music.css">
-	<link rel="stylesheet" type="text/css" href="css/slide.css">
+	<link rel="stylesheet" type="text/css" href="css/slides.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
 	<link rel="stylesheet" type="text/css" href="css/navs.css">
 	<script src="js/fade.js" defer></script>
 	<script src="js/slide.js" defer></script>
-	<script src="js/reveal.js" defer></script>
+	<script src="js/switch.js" defer></script>
 </head>
 <body>
-
-	<div class="slideshow-container">
 		<header>
-			<nav>
-				<ul>
-					<li><a id="link-color" href="./index.html">Home</a></li>
-						<div class="dropbox">
-							<li><a id="link-color" href="#">Content</a></li>
-								<div class="dropbox-content">
-									<div>
-										<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
-										<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
-										<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
-									</div>
-								</div>
+		<nav>
+			<ul>
+				<li><a id="link-color" href="./index.html">Home</a></li>
+				<div class="dropbox">
+					<li><a id="link-color" href="#">Content</a></li>
+					<div class="dropbox-content">
+						<div>
+							<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
+							<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
+							<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
 						</div>
-					<li><a id="link-color" href="./source.html">Source</a></li>
-				</ul>
-			</nav>
+					</div>
+				</div>
+				<li><a id="link-color" href="./source.html">Source</a></li>
+			</ul>
+		</nav>
 		</header>
 
 		<div id="music-box">
@@ -51,27 +48,17 @@
 			<a class="btn" id="nyan-btn">Music</a>
 		</div>
 
-		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-				<img src="img/o-banner.jpg">
+		<div class="box">
 
-				<a class="prev" href="./visuals.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./gameplay.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+			<img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)">
+			<img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)">
 
-					<div id="skyward">
+				<div class="mySlides">
+					<div id="o">
+						<img src="img/o-banner.jpg">
 						<div id="center-box">
-
 							<h1>The Legend of Zelda Hardware Limitations</h1>
 
-							<div id="flex-center">
-								<div class="nav-tabs" id="nav-tab" role="tablist">
-									<div class="nav nav-tabs" id="nav-tab" role="tablist">
-										<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-										<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-										<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
-									</div>
-								</div>
-							</div><br>
 							<p>Needless to say, the original Legend of Zelda
 							had plenty of issues when trying to create a game of its scale with
 							such limited resources. A single screen could only display 256x240
@@ -135,26 +122,13 @@
 					</div>
 				</div>
 
-			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-				<img src="img/oot-banner.jpg">
+				<div class="mySlides">
+					<div id="oot">
+						<img src="img/oot-banner.jpg">
+						<div id="center-box">
+							<h1>Ocarina of Time Hardware Limitations</h1><br>
 
-				<a class="prev" href="./visuals.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./gameplay.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-						<h1>Ocarina Of Time Hardware Limitations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
-								</div>
-							</div>
-						</div><br>
-						<p>Taking a leap from 2D into 3D presented a whole new set of challenges
+							<p>Taking a leap from 2D into 3D presented a whole new set of challenges
 						for Nintendo to overcome. Creating a 3D space presents a lot more creative
 						freedoms in terms of perspective and controls; however, many early 3d games
 						found great difficulty in the sense of distance and perspective.</p>
@@ -167,6 +141,8 @@
 						of which there were three, had the most trouble of the entire game, and he said
 						that there would be occasions where they would actually cry.”</p>
 
+						<img id="half" src="img/kokiri-forest.png"><br>
+
 						<p>On the more technical side, limitations of the N64 would come to pose
 						problems for graphical fidelity. The 150,000 per second polygon load of
 						the N64 sounds impressive at first. Despite this, the characters themselves
@@ -177,88 +153,83 @@
 						Sheik is an excellent example of ingenuity from Nintendo; the texture used on her
 						arms is the same on the waist and legs.</p>
 
-						<img id="half" src="img/sheik-model.jpg"><br>
+						<img id="half" src="img/sheik-model.jpg"><br><br>
 
-						<p><span>CPU:</span>64-bit R4300i RISC (93.75MHz) / 64-bit data paths, registers with 5-stage pipelining<br>
-						<span>Co-processor:</span>64-bit RISC (62.5MHz)<br>
-						<span>RAM:</span>4MB (36Mb) upgradeable<br>
-						<span>Graphics:</span>Pixel Drawing Processor (RDP) built into co-processor<br>
-						<span>Colors:</span>16.7 million (32,000 on screen)<br>
-						<span>Polygons:</span>150,000 per second<br>
-						<span>Resolution:</span>640x480 pixels<br>
-						<span>Sound:</span>16 to 24-channel 16-bit stereo (up to 100 PCM channels possible)</p>
-
-						<img id="half" src="img/nes-console.jpg">
-
-					</div>
-				</div>
-			</div><!--Div End -->
-
-			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-				<img src="img/ss-banner.jpg">
-
-				<a class="prev" href="./visuals.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./gameplay.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Skyward Sword Hardware Limitations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
-								</div>
+						<div class="flex-container">
+							<div class="control">
+								<p><span>CPU:</span>64-bit R4300i RISC (93.75MHz) / 64-bit data paths, registers with 5-stage pipelining<br>
+								<span>Co-processor:</span>64-bit RISC (62.5MHz)<br>
+								<span>RAM:</span>4MB (36Mb) upgradeable<br>
+								<span>Graphics:</span>Pixel Drawing Processor (RDP) built into co-processor<br>
+								<span>Colors:</span>16.7 million (32,000 on screen)<br>
+								<span>Polygons:</span>150,000 per second<br>
+								<span>Resolution:</span>640x480 pixels<br>
+								<span>Sound:</span>16 to 24-channel 16-bit stereo (up to 100 PCM channels possible)</p>
+							</div>
+							<div class="controller">
+								<img id="smaller-img" src="./img/nes-console.jpg">
 							</div>
 						</div><br>
 
-
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-			<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
-				<img src="img/botw-banner.jpg">
+				<div class="mySlides">
+					<div id="ss">
+						<img src="img/ss-banner.jpg">
+						<div id="center-box">
+							<h1>Skyward Sword Hardware Limitations</h1><br>
 
-				<a class="prev" href="./visuals.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./gameplay.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Breath of the Wild Hardware Limitations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-								</div>
+							<div class="flex-container">
+							<div class="control">
+								<p><span>Operating System:</span>Wii System Software<br>
+								<span>CPU:</span>IBM PowerPC Broadway @ 729 MHz<br>
+								<span>Storage:</span>512 MB NAND flash memory<br>
+								<span>Removable storage:</span>SD/SDHC card, GameCube Memory Card<br>
+								<span>Display:</span>Video Output Formats<br>
+								<span>Graphics:</span>ATI Hollywood @ 243 MHz<br>
+								<span>Controller Input:</span>Wii Remote (Plus), GameCube Controller, Nintendo DS, Wii Balance Board<br>
+								<span>Connectivity:</span>Wi-Fi IEEE 802.11 b/g, Bluetooth, 2 × USB 2.0, LAN Adapter (via USB 2.0)</p>
+							</div>
+							<div class="controller">
+								<img id="smaller-img" src="./img/wii.jpg">
 							</div>
 						</div><br>
 
-						<p data-aos="fade-up">Breath of The Wild Hardware Innovations</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-		</div>
+				<div class="mySlides">
+					<div id="botw">
+						<img src="img/botw-banner.jpg">
+						<div id="center-box">
+							<h1>Breath of the Wild Hardware Limitations</h1><br>
+
+							<p>Wii U Vs Switch</p>
+							<p>Originally designed for the wii u, switched to be able to port to the switch with the same experience.</p>
+
+							<div class="flex-container">
+								<div class="control">
+									<p><span>Screen:</span>Multi-touch capacitive touch screen / 6.2-inch LCD Screen / 1280 x 720 <br>
+									<span>CPU:</span>NVIDIA Custom Tegra processor<br>
+									<span>Storage:</span>32 GB of internal storage, a portion of which is reserved for use by the system. Users can easily expand storage space using microSDHC or microSDXC cards up to 2TB <br>
+									<span>Video Output:</span>Up to 1080p via HDMI in TV mode Up to 720p via built-in screen in tabletop mode and handheld mode<br>
+									<span>Sound:</span>Stereo<br>
+									<span>Sensor:</span>Accelerometer, gyroscope, and brightness sensor<br>
+									<span>Internal Battery:</span>Lithium-ion battery<br>
+									<span>Battery Life:</span>Approx. 2.5 to 6.5 hours</p>
+								</div>
+								<div class="controller">
+									<img id="smaller-img" src="./img/switch.jpg">
+								</div>
+							</div><br>
+
+						</div>
+					</div>
+				</div>
+
 	</div>
 
 	<!-- Footer -->

@@ -12,36 +12,33 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="https://yuli016.github.io/zelda/img/triforce.png"/>
 
-	<link rel="stylesheet" type="text/css" href="css/banner.css">
 	<link rel="stylesheet" type="text/css" href="css/basic.css">
 	<link rel="stylesheet" type="text/css" href="css/music.css">
-	<link rel="stylesheet" type="text/css" href="css/slide.css">
+	<link rel="stylesheet" type="text/css" href="css/slides.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
 	<link rel="stylesheet" type="text/css" href="css/navs.css">
 	<script src="js/fade.js" defer></script>
 	<script src="js/slide.js" defer></script>
-	<script src="js/reveal.js" defer></script>
+	<script src="js/switch.js" defer></script>
 </head>
 <body>
-
-	<div class="slideshow-container">
 		<header>
-			<nav>
-				<ul>
-					<li><a id="link-color" href="./index.html">Home</a></li>
-						<div class="dropbox">
-							<li><a id="link-color" href="#">Content</a></li>
-								<div class="dropbox-content">
-									<div>
-										<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
-										<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
-										<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
-									</div>
-								</div>
+		<nav>
+			<ul>
+				<li><a id="link-color" href="./index.html">Home</a></li>
+				<div class="dropbox">
+					<li><a id="link-color" href="#">Content</a></li>
+					<div class="dropbox-content">
+						<div>
+							<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
+							<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
+							<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
 						</div>
-					<li><a id="link-color" href="./source.html">Source</a></li>
-				</ul>
-			</nav>
+					</div>
+				</div>
+				<li><a id="link-color" href="./source.html">Source</a></li>
+			</ul>
+		</nav>
 		</header>
 
 		<div id="music-box">
@@ -51,27 +48,17 @@
 			<a class="btn" id="nyan-btn">Music</a>
 		</div>
 
-		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-				<img src="img/o-banner.jpg">
+		<div class="box">
 
-				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+			<img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)">
+			<img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)">
 
-					<div id="skyward">
+				<div class="mySlides">
+					<div id="o">
+						<img src="img/o-banner.jpg">
 						<div id="center-box">
+							<h1>The Legend of Zelda Gameplay Innovations</h1><br>
 
-							<h1>The Legend of Zelda Gameplay Innovations</h1>
-
-							<div id="flex-center">
-								<div class="nav-tabs" id="nav-tab" role="tablist">
-									<div class="nav nav-tabs" id="nav-tab" role="tablist">
-										<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-										<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-										<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
-									</div>
-								</div>
-							</div><br>
 							<h2>Controls</h2>
 							<div class="flex-container">
 								<div class="control">
@@ -82,11 +69,25 @@
 									<span>Start:</span> Also able to pause the game as well as bringing up the subscreen.</p>
 								</div>
 								<div class="controller">
-									<img id="smaller-img" src="./img/nes.png">
+									<img id="smaller-img" src="./img/nes-controller.jpg">
 								</div>
+								<p>The controls are basic and easy to use because there are not that many buttons on the Nes controller and mainly just moving the D-pad and using A and B to attack enemies.</p>
 							</div><br>
 
 							<h2>Overworld</h2>
+							<p>Most other games would focus on getting high scores but in The
+							Legend of Zelda game during it’s time it created a new kind of
+							gameplay and allowed players to be able to save their progress
+							to later resume playing where they left off.  The gameplay is mainly
+							just exploring the overworld in a top view perspective fighting
+							monsters, collecting rupees to buy useful
+							items and upgrading weapons in shops, finding secret location to collect
+							items and finding all 8 locations of the dungeons (The Eagle, The Moon, The Manji,
+							The Snake, The Lizard, The Dragon, The Demon, The Lion) to beat.  Because
+							the game is nonlinear it allows players to freely go where they want
+							in the overworld and complete the dungeons in any order because you
+							need to collect all 8 pieces of the Triforce in order to
+							enter Death Mountain to defeat Ganon.</p><br>
 
 							<img src="./img/overworld.png"><br><br>
 
@@ -133,186 +134,200 @@
 									<img src="./img/death.png">
 									<figcaption>Death Moutain</figcaption>
 								</div><br><br>
-							</div>
+							</div><br><br>
+
+							<p>When you enter a dungeon it’s a labyrinth with many rooms filled
+							with monsters and useful items to collect but sometimes you’re unable
+							to beat a dungeon if they don’t have a specific item to continue
+							going forward.  Some rooms you can avoid fighting enemies and go to
+							the next room but sometimes you have to kill all the enemies to
+							collect a small key to open a door.  Each dungeon provides a compass
+							to help show the player the location of the piece of Triforce, a
+							dungeon map showing the layout of the rooms of how it’s connected,
+							and a new item to use.  When you beat the boss of the dungeon they
+							drop a heart container optioninal for the player to collect to
+							increase their health.  Once you collect one of the pieces of the
+							Triforce you exit the dungeon and appear in front of the entrance
+							and continue to find the other dungeons.</p>
+
+							<img id="half" src="./img/dungeon1.png">
+
+							<p>Second Quest is unlocked when you beat the game or when you enter
+							the name “ZELDA” as the player’s name.  During the Second Quest the
+							game is more difficult for players wanting a more challenging experience.
+							The difference is the location of the Dungeons and items are located in
+							different areas making the player be able to re-experience exploring
+							the overworld to find them while fighting even stronger enemies.</p>
 
 						</div>
 					</div>
 				</div>
 
-			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-				<img src="img/oot-banner.jpg">
+				<div class="mySlides">
+					<div id="oot">
+						<img src="img/oot-banner.jpg">
+						<div id="center-box">
+							<h1>Ocarina of Time Gameplay Innovations</h1><br>
 
-				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-						<h1>Ocarina Of Time Gameplay Innovations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-profile" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+							<h2>Controls</h2>
+							<div class="flex-container">
+								<div class="control">
+									<p><span>Control Stick:</span> Move Link, Aim Weapon<br>
+									<span>A Button:</span> Jump, Roll, Interact Context Sensitive<br>
+									<span>R Button:</span> Crouch<br>
+									<span>C Buttons ◄, ►, ▼:</span> Use Assigned Item or Weapon<br>
+									<span>Z Button:</span>Targeting System, and to Center the Camera<br>
+									<span>Start:</span>Pause Menu<br>
+									<span>C Button ▲:</span>First-Person View<br>
+									<span>B Button:</span>Save Game on paused Menu</p>
 								</div>
-							</div>
-						</div><br>
+								<div class="controller">
+									<img id="smaller-img" src="./img/n64.jpg">
+								</div>
+							</div><br><br>
 
-						<h2>Controls</h2>
-						<div class="flex-container">
-							<div class="control">
-								<p><span>Control Stick:</span> Move Link, Aim Weapon<br>
-								<span>A Button:</span> Jump, Roll, Interact Context Sensitive<br>
-								<span>R Button:</span> Crouch<br>
-								<span>C Buttons ◄, ►, ▼:</span> Use Assigned Item or Weapon<br>
-								<span>Z Button:</span>Targeting System, and to Center the Camera<br>
-								<span>Start:</span>Pause Menu<br>
-								<span>C Button ▲:</span>First-Person View<br>
-								<span>B Button:</span>Save Game on paused Menu</p>
-							</div>
-							<div class="controller">
-								<img id="smaller-img" src="./img/n64.jpg">
-							</div>
-						</div><br>
+							<div class="flex-container">
+								<div class="controller">
+									<img id="smaller-img" src="./img/z-targeting.jpg">
+								</div>
+								<div class="control">
+									<p>Because Ocarina of Time is the first game in the series to use
+									3D graphics Nintendo included a new mechanic Z-targeting when pressing
+									the Z trigger it locks onto an enemy or object and the camera follows
+									the target to make Link face it.  When there is no target to lock on
+									when pressing the Z the camera would just lock Link into facing the
+									direction he’s in to help have a reliable control of the camera in 3D space.
+									Z-Targeting is an important innovation that is used in many 3D combat games.</p>
+								</div>
+							</div><br>
 
-						<h2>Overworld</h2>
+							<div class="flex-container">
+								<div class="controller">
+								</div>
+								<div class="control">
+									<p>Controllers are limited to the amount of buttons they have and Nintendo
+									used Context-Sensitive to allow one button to have many different actions
+									depending on Link’s surroundings to interact with the environment changing
+									the A button actions to understand the player’s intent.  The A button can
+									be used to climb a box when Link is near the box he can climb on top of it and
+									if Link is near a door can open the door.</p>
+								</div>
+							</div><br>
 
-						<img src="./img/oot-overworld.png">
+							<div class="flex-container">
+								<div class="controller">
+									<img id="smaller-img" src="./img/ocarina.jpg"><br>
+								</div>
+								<div class="control">
+									<p>The player is taught songs by various characters to be able to use to solve
+									puzzles, call Epona to ride across Hyrule, change the time in Hyrule to day or
+									night, cause rain, and after beating a temple be able to wrap there by playing
+									the song in the correct order key button on the ocarina.</p>
+								</div>
+							</div><br>
 
-						<p data-aos="fade-up">Ocarina of Time Gameplay Innovations</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+							<p>The concept of time travel allows players to explore Hyrule into
+							two different eras of the present and the future.  In the present Link
+							is a child and Hyrule has some dangers and has to collect 3 Spiritual
+							Stones to open the door to the Sacred Realm.  Young Link can’t change
+							tunics, boots, or swords because they are adult size, or use any weapons
+							that adult Link can use but can crawl into small areas.
+							In the future Link is an adult and Hyrule is plagued by curses and
+							has to free five temples from Ganondorf’s control and awaken each temple
+							sage to help seal Ganondorf in the Dark Realm. Adult Link can change his
+							tunics to survive high temperatures, and breathe underwater, use iron boots
+							to walk underwater, and use hover boots to walk on air for a short time.
+							Only adult Link can ride Epona across Hyrule because Epona is old enough
+							to carry Link.  Changing between the present and future is caused by putting or
+							taking the Master Sword.  Most of the change of switching is mainly
+							the weapons and equipment Link can use.  The overworld is the same,
+							just the look is different.</p>
+
+
+							<h2>Overworld</h2>
+
+							<img src="./img/oot-overworld.png">
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-				<img src="img/ss-banner.jpg">
+				<div class="mySlides">
+					<div id="ss">
+						<img src="img/ss-banner.jpg">
+						<div id="center-box">
+							<h1>Skyward Sword Gameplay Innovations</h1><br>
+							<h2>Controls</h2>
+							<div class="flex-container">
+								<div class="control">
+									<p><span>Control Stick:</span>Moves Link<br>
+									<span>A Button:  </span>Put Away Sword, Hold To Dash, Interact with Things<br>
+									<span>B Button:  </span>Equip A Subweapon, Hold to Select Subweapon<br>
+									<span>Z Button:  </span>Center Camera Behind Link, Hold To Lock On<br>
+									<span>C Button:  </span>First-Person View, Perform Dowsing<br>
+									<span>Shake Nunchuk:  </span>Shield Bash, (while dashing) Forward Roll<br>
+									<span>Shake Wii Remote:  </span>Swing Sword<br>
 
-				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Skyward Sword Gameplay Innovations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+									<span>Down D-Pad:  </span>Talk To Fi<br>
+									<span>-:  </span>Equip an Item, Hold To Select Item<br>
+									<span>+:  </span>Show Map<br>
+									<span>1:  </span>Show Equipment Subscreen<br>
+									<span>2:  </span>Show Help<br></p>
 								</div>
-							</div>
-						</div><br>
 
-						<h2>Controls</h2>
-						<div class="flex-container">
-						  <div class="control">
-								<p><span>Control Stick:</span>Moves Link<br>
-								<span>A Button:  </span>Put Away Sword, Hold To Dash, Interact with Things<br>
-								<span>B Button:  </span>Equip A Subweapon, Hold to Select Subweapon<br>
-								<span>Z Button:  </span>Center Camera Behind Link, Hold To Lock On<br>
-								<span>C Button:  </span>First-Person View, Perform Dowsing<br>
-								<span>Shake Nunchuk:  </span>Shield Bash, (while dashing) Forward Roll<br>
-								<span>Shake Wii Remote:  </span>Swing Sword<br>
+								<div class="controller">
+									<img id="smaller-img" src="./img/wii-controller.jpg">
+								</div>
+							</div><br>
 
-								<span>Down D-Pad:  </span>Talk To Fi<br>
-								<span>-:  </span>Equip an Item, Hold To Select Item<br>
-								<span>+:  </span>Show Map<br>
-								<span>1:  </span>Show Equipment Subscreen<br>
-								<span>2:  </span>Show Help<br></p>
-							</div>
+							<h2>Overworld</h2>
 
-						  <div class="controller">
-								<img id="smaller-img" src="./img/wii.jpg">
-							</div>
-						</div><br>
+							<img src="./img/ss-overworld.jpg">
 
-						<h2>Overworld</h2>
-
-						<img src="./img/ss-overworld.jpg">
-
-						<p data-aos="fade-up">Skyward Swords Gameplay Innovations</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-			<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
-				<img src="img/botw-banner.jpg">
+				<div class="mySlides">
+					<div id="botw">
+						<img src="img/botw-banner.jpg">
+						<div id="center-box">
+							<h1>Breath of the Wild Gameplay Innovations</h1><br>
 
-				<a class="prev" href="./hardware.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./visuals.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Breath of the Wild Gameplay Innovations</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
+							<h2>Controls</h2>
+							<div class="flex-container">
+								<div class="control">
+									<p><span>A Button:  </span>Action, Take, Climb Down<br>
+									<span>B Button:  </span> Sprint, Close<br>
+									<span>X Button:  </span>Jump, Climb<br>
+									<span>Y Button:  </span>Attack<br>
+									<span>R Stick:  </span>Move camera, telescope view (click)<br>
+									<span>L Stick:  </span>Move Link, stealth mode (click)<br>
+									<span>L:  </span>Use item, navigate menu<br>
+									<span>ZL:  </span>Shield/Lock on target (hold)<br>
+									<span>R:  </span>Throw weapon, navigate menu<br>
+									<span>ZR:  </span>Bow (draw and shoot arrows)<br>
+									<span>◄:  </span>Switch shield (hold and change with right stick)<br>
+									<span>►:  </span>Switch weapon (hold and change with right stick)<br>
+									<span>▲:  </span>Switch special item (hold and change with right stick)<br>
+									<span>▼:  </span>Whistle<br>
+									<span>-:  </span>Sheikah Slate (runes, powers, map, missions, destinations, memories)<br>
+									<span>+:  </span>Pause/inventory (weapons, armor, gear)<br>
+									<span>◘:  </span>Capture Button: Capture screenshot/video<br>
+									<span>⌂:  </span>Home Button<br>
+									<span>Tilt Switch/controller:  </span>Precision aiming</p><br>
 								</div>
-							</div>
-						</div><br>
+								<div class="controller">
+									<img id="smaller-img" src="./img/switch-pro-controller.jpg">
+								</div>
+							</div><br>
 
-						<h2>Controls</h2>
-						<div class="flex-container">
-							<div class="control">
-								<p><span>A Button:  </span>Action, Take, Climb Down<br>
-								<span>B Button:  </span> Sprint, Close<br>
-								<span>X Button:  </span>Jump, Climb<br>
-								<span>Y Button:  </span>Attack<br>
-								<span>R Stick:  </span>Move camera, telescope view (click)<br>
-								<span>L Stick:  </span>Move Link, stealth mode (click)<br>
-								<span>L:  </span>Use item, navigate menu<br>
-								<span>ZL:  </span>Shield/Lock on target (hold)<br>
-								<span>R:  </span>Throw weapon, navigate menu<br>
-								<span>ZR:  </span>Bow (draw and shoot arrows)<br>
-								<span>◄:  </span>Switch shield (hold and change with right stick)<br>
-								<span>►:  </span>Switch weapon (hold and change with right stick)<br>
-								<span>▲:  </span>Switch special item (hold and change with right stick)<br>
-								<span>▼:  </span>Whistle<br>
-								<span>-:  </span>Sheikah Slate (runes, powers, map, missions, destinations, memories)<br>
-								<span>+:  </span>Pause/inventory (weapons, armor, gear)<br>
-								<span>◘:  </span>Capture Button: Capture screenshot/video<br>
-								<span>⌂:  </span>Home Button<br>
-								<span>Tilt Switch/controller:  </span>Precision aiming</p><br>
-							</div>
-							<div class="controller">
-								<img id="smaller-img" src="./img/switch.png">
-							</div>
-						</div><br>
+							<h2>Overworld</h2>
+							<img src="./img/botw-map.jpg">
 
-						<h2>Overworld</h2>
-						<img src="./img/botw-map.jpg">
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-		</div>
 	</div>
 
 	<!-- Footer -->

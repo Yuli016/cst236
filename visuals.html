@@ -12,37 +12,33 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"/>
 	<link rel="shortcut icon" type="image/x-icon" href="https://yuli016.github.io/zelda/img/triforce.png"/>
 
-	<link rel="stylesheet" type="text/css" href="css/banner.css">
 	<link rel="stylesheet" type="text/css" href="css/basic.css">
 	<link rel="stylesheet" type="text/css" href="css/music.css">
-	<link rel="stylesheet" type="text/css" href="css/slide.css">
+	<link rel="stylesheet" type="text/css" href="css/slides.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
 	<link rel="stylesheet" type="text/css" href="css/navs.css">
-	<link rel="stylesheet" type="text/css" href="css/hover.css">
 	<script src="js/fade.js" defer></script>
 	<script src="js/slide.js" defer></script>
-	<script src="js/reveal.js" defer></script>
+	<script src="js/switch.js" defer></script>
 </head>
 <body>
-
-	<div class="slideshow-container">
 		<header>
-			<nav>
-				<ul>
-					<li><a id="link-color" href="./index.html">Home</a></li>
-						<div class="dropbox">
-							<li><a id="link-color" href="#">Content</a></li>
-								<div class="dropbox-content">
-									<div>
-										<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
-										<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
-										<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
-									</div>
-								</div>
+		<nav>
+			<ul>
+				<li><a id="link-color" href="./index.html">Home</a></li>
+				<div class="dropbox">
+					<li><a id="link-color" href="#">Content</a></li>
+					<div class="dropbox-content">
+						<div>
+							<li><a id="box-link" href="./hardware.html">Hardware Limitations</a></li>
+							<li><a id="box-link" href="./gameplay.html">Gameplay Innovations</a></li>
+							<li><a id="box-link" href="./visuals.html">Visuals Designs</a></li>
 						</div>
-					<li><a id="link-color" href="./source.html">Source</a></li>
-				</ul>
-			</nav>
+					</div>
+				</div>
+				<li><a id="link-color" href="./source.html">Source</a></li>
+			</ul>
+		</nav>
 		</header>
 
 		<div id="music-box">
@@ -52,137 +48,119 @@
 			<a class="btn" id="nyan-btn">Music</a>
 		</div>
 
-		<div class="tab-content" id="nav-tabContent">
-			<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-				<img src="img/o-banner.jpg">
+		<div class="box">
 
-				<a class="prev" href="./gameplay.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./hardware.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+			<img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)">
+			<img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)">
 
-					<div id="skyward">
+				<div class="mySlides">
+					<div id="o">
+						<img src="img/o-banner.jpg">
 						<div id="center-box">
+							<h1>The Legend of Zelda Visuals Design</h1><br>
 
-							<h1>The Legend of Zelda Visuals Design</h1>
+							<p>The earliest form of Link has a lot more room for interpretation due
+							to his small size, however, this design did set the groundwork for one of
+							the most iconic characters in video game history. Another interesting facet
+							of this design is the more anime aesthetic Link had in his character design;
+							this design reflects Link as a product of his home country rather than being
+							designed to mass appeal for international audiences. The original Link somewhat
+							represents Nintendo’s humble beginnings as a local developer rather than the
+							super-corporation they are known as today.</p>
 
-							<div id="flex-center">
-								<div class="nav-tabs" id="nav-tab" role="tablist">
-									<div class="nav nav-tabs" id="nav-tab" role="tablist">
-										<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-										<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-										<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
-									</div>
+							<div class="flex-container">
+								<div class="controller">
+									<img id="half" src="./img/o-artwork.png">
+									<figcaption>Link Artwork</figcaption>
 								</div>
-							</div><br>
+								<div class="control">
+									<img id="half" src="./img/o-link.png">
+									<figcaption>Link In Game</figcaption>
+								</div>
+							</div>
 
-							<p data-aos="fade-up">The Original Visuals Designs</p>
-							<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-							non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
 						</div>
 					</div>
 				</div>
 
-			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-				<img src="img/oot-banner.jpg">
+				<div class="mySlides">
+					<div id="oot">
+						<img src="img/oot-banner.jpg">
+						<div id="center-box">
+							<h1>Ocarina of Time Visuals Design</h1><br>
 
-				<a class="prev" href="./gameplay.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./hardware.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
+							<p>With a new Era of console came a revision of design for Nintendo's
+							most iconic franchises. The Legend of Zelda was in for a makeover featuring
+							its first debut into 3D. Not only did the designs need to be simple, but also
+							able to communicate two different versions of the same characters in both the
+							present and future. This specific incantation of Link defined many of the
+							future design principles of Link, with blonde hair, pointed ears and a small nose.</p>
 
-				<div id="skyward">
-					<div id="center-box">
-						<h1>Ocarina Of Time Visuals Design</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+							<div class="flex-container">
+								<div class="control">
+									<img id="half" src="./img/both-links.jpg">
+									<figcaption>Link Artwork</figcaption>
+								</div>
+								<div class="controller">
+									<img id="half" src="./img/young-link.png">
+									<img id="half" src="./img/adult-link.png">
+									<figcaption>Link In Game</figcaption>
 								</div>
 							</div>
-						</div><br>
 
-						<p data-aos="fade-up">Ocarina of Time Visuals Designs</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-			<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-				<img src="img/ss-banner.jpg">
+				<div class="mySlides">
+					<div id="ss">
+						<img src="img/ss-banner.jpg">
+						<div id="center-box">
+							<h1>Skyward Sword Visuals Design</h1><br>
 
+							<p>The release of Skyward Sword marked a new generation of games as
+							it was the only Zelda developed specifically for the Wii. With a new
+							wave of fans entering the franchise, Link received a far more realistic
+							design to match the expectations for higher visual fidelity. Most of
+							the designs from ocarina of time stay consistent with this link, aside
+							from more complex clothes and a more rounded face.</p>
 
-				<a class="prev" href="./gameplay.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./hardware.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Skyward Sword Visuals Design</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-setting" role="tab" aria-controls="nav-setting" aria-selected="false">Breath Of The Wild</a><br>
+							<div class="flex-container">
+								<div class="control">
+									<img id="half" src="./img/ss-art-link.png">
+									<figcaption>Link Artwork</figcaption>
+								</div>
+								<div class="controller">
+									<img id="half" src="./img/ss-ingame.jpg">
+									<figcaption>Link In Game</figcaption>
 								</div>
 							</div>
-						</div><br>
 
-						<p data-aos="fade-up">Skyward Swords Visuals Designs</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-			<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-setting-tab">
-				<img src="img/botw-banner.jpg">
+				<div class="mySlides">
+					<div id="botw">
+						<img src="img/botw-banner.jpg">
+						<div id="center-box">
+							<h1>Breath of the Wild Visuals Design</h1><br>
 
-				<a class="prev" href="./gameplay.html"> <img id="left" src="./img/triforce-left.png" onclick="plusSlides(-1)"></a>
-				<a class="next" href="./hardware.html"> <img id="right" src="./img/triforce-right.png" onclick="plusSlides(1)"></a>
-
-				<div id="skyward">
-					<div id="center-box">
-
-						<h1>Breath of the Wild Visuals Design</h1>
-
-						<div id="flex-center">
-							<div class="nav-tabs" id="nav-tab" role="tablist">
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a id="centering" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">The Legend of Zelda</a><br>
-									<a id="centering" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ocarina Of Time</a><br>
-									<a id="centering" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Skyward Sword</a><br>
+							<div class="flex-container">
+								<div class="control">
+									<img id="half" src="./img/botw-link.png">
+									<figcaption>Link Artwork</figcaption>
+								</div>
+								<div class="controller">
+									<img id="half" src="./img/botw-ingame.png">
+									<figcaption>Link In Game</figcaption>
 								</div>
 							</div>
-						</div><br>
 
-						<p data-aos="fade-up">Breath of The Wild Visuals Designs</p>
-						<p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+						</div>
 					</div>
 				</div>
-			</div><!--Div End -->
 
-		</div>
 	</div>
 
 	<!-- Footer -->
