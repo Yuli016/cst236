@@ -20,6 +20,10 @@ body {
   box-sizing: border-box;
 }
 
+#smalltext {
+  font-size: 1rem;
+}
+
 img {
   width: 100%;
   height: 100%;

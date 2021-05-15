@@ -121,21 +121,3 @@ figcaption {
   font-weight: bolder;
   color: #b8860b;
 }
-
-
-* {
-  box-sizing: border-box;
-}
-
-.link-art-column {
-  float: left;
-  width: 30%;
-  padding: 2px;
-}
-
-/* Clearfix (clear floats) */
-.link-art-row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
