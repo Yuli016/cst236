@@ -30,12 +30,12 @@ img {
 }
 
 #center-box {
-  padding: 5vh 3vw;
+  padding: 1vh 3vw 5vh 3vw;
 }
 
 @media screen and (min-width: 700px) {
   #center-box {
-    padding: 7vh 7vw;
+    padding: 1vh 7vw 7vh 7vw;
   }
 }
 
